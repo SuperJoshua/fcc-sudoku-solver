@@ -1,24 +1,21 @@
 "use strict"
 
 class SudokuSolver {
+   // Columns are numbered 1-9, rows A-I.
 
-   static validate(puzzleString) {
+   static validate(puzzle) {
    }
 
-   static checkRowPlacement(puzzleString, row, column, value) {
-
+   static check_row(puzzle, row, column, value) {
    }
 
-   static checkColPlacement(puzzleString, row, column, value) {
-
+   static check_column(puzzle, row, column, value) {
    }
 
-   static checkRegionPlacement(puzzleString, row, column, value) {
-
+   static check_region(puzzle, row, column, value) {
    }
 
-   static solve(puzzleString) {
-      
+   static solve(puzzle) {
    }
 }
 

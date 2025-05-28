@@ -10,24 +10,135 @@ chai.use(chaiHttp)
 suite("Functional Tests", function () {
 
    suite("Testing /api/solve", function () {
-"Solve a puzzle with valid puzzle string"
-"Solve a puzzle with missing puzzle string"
-"Solve a puzzle with invalid characters"
-"Solve a puzzle with incorrect length"
-"Solve a puzzle that cannot be solved"
+      test("Solve a puzzle with valid puzzle string", function (done) {
+         chai.request(server)
+         .post("/api/solve")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Solve a puzzle with missing puzzle string", function (done) {
+         chai.request(server)
+         .post("/api/solve")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Solve a puzzle with invalid characters", function (done) {
+         chai.request(server)
+         .post("/api/solve")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Solve a puzzle with incorrect length", function (done) {
+         chai.request(server)
+         .post("/api/solve")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Solve a puzzle that cannot be solved", function (done) {
+         chai.request(server)
+         .post("/api/solve")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
    })
 
    suite("Testing /api/check", function () {
-"Check a puzzle placement with all fields"
-"Check a puzzle placement with single placement conflict"
-"Check a puzzle placement with multiple placement conflicts"
-"Check a puzzle placement with all placement conflicts"
-"Check a puzzle placement with missing required fields"
-"Check a puzzle placement with invalid characters"
-"Check a puzzle placement with incorrect length"
-"Check a puzzle placement with invalid placement coordinate"
-"Check a puzzle placement with invalid placement value"
+      test("Check a puzzle placement with all fields", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Check a puzzle placement with single placement conflict", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Check a puzzle placement with multiple placement conflicts", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Check a puzzle placement with all placement conflicts", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Check a puzzle placement with missing required fields", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Check a puzzle placement with invalid characters", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Check a puzzle placement with incorrect length", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Check a puzzle placement with invalid placement coordinate", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
+      test("Check a puzzle placement with invalid placement value", function (done) {
+         chai.request(server)
+         .post("/api/check")
+         .send()
+         .end(function(err, res) {
+            assert.equal(res.status, 200)
+            done()
+         })
+      })
    })
-
 })
 
